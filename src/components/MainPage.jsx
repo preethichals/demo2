@@ -116,14 +116,14 @@ function ManiPage() {
 
         <>
           <div className="container mt-5">
-            <div className="container justify-content-center">
-              <div className="row">
+            <div className="container text-center">
+              <div className="row ">
                 {user &&
                   user.map((m, index) => {
                     return (
-                      <Link onClick={handleShow} key={index} className="col-4">
+                      <Link onClick={handleShow} key={index} className="col-3">
                         <div
-                          className="bg-white rounded-5 text-center d-flex align-items-center justify-content-center"
+                          className="bg-white mx-auto my-3  rounded-5 text-center d-flex align-items-center justify-content-center"
                           style={{ width: "100px", height: "100px" }}
                         >
                           <h3 className="text text-uppercase text-color1">
@@ -132,8 +132,8 @@ function ManiPage() {
                           </h3>
                         </div>
                         <div className="text-white mt-3">
-                          <h5 className=" text-capitalize">{m.first_name} </h5>
-                          <h5 className="text-capitalize">{m.last_name}</h5>
+                          <h5 className=" text-capitalize"><span>{m.first_name} </span> <span> {m.last_name}</span> </h5>
+                         
                         </div>
                       </Link>
                     );
